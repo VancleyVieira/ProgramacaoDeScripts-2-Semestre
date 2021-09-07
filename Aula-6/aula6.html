@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Aula 6</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="aula6.css" />
+		<script type="text/javascript" src="meu-arquivo.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>Cabeçalho</h1>
+		</header>
+		<nav>
+			<a class="link" href="aula6.html">Aula 6</a>
+			<a class="link" href="aula6.html">Aula 6</a>
+			<a class="link" href="aula6.html">Aula 6</a>
+			<a class="link" href="aula6.html">Aula 6</a>
+		</nav>
+		<section>
+			<a href="aula6.html">Aula 6</a>
+			<h3>Calculadora de soma</h3>
+				<center>
+					<form id="form">
+						<input id="field1"  type="number" placeholder="Primeiro numero">
+						<input id="field2"  type="number" placeholder="Segundo numero">
+						<button>Calcular</button>
+					</form>
+					<div id="result"></div>
+					<img src="calculadora.png">
+				</center>
+				<script>
+				function onSubmit(event) {
+					event.preventDefault()
+				
+					let n1 = parseFloat(field1.value)
+					let n2 = parseFloat(field2.value)
+				
+				
+					let sum = n1 + n2
+				
+					result.innerHTML = `
+					  <ul>
+						<li>Soma: <b>${sum}</b>.</li>
+					  </ul>
+					`
+				  }
+				  form.addEventListener('submit', onSubmit)
+				</script>
+		</section>
+		<footer>	
+			Rodapé		
+		</footer>
+	</body>
+</html>
